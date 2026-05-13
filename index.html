@@ -21,10 +21,14 @@
       </a>
       <nav class="header__nav" id="mainNav">
         <a href="#">About Us</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
+        <a href="#">Products
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </a>
       </nav>
-      <button class="btn btn--primary" id="headerQuoteBtn">Get Quote</button>
+      <button class="btn btn--primary" id="headerQuoteBtn">Contact Us</button>
       <!-- Mobile menu toggle (visible < 800px) -->
       <button class="header__hamburger" id="hamburgerBtn" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -48,22 +52,30 @@
       <div class="container hero__grid">
         <!-- Carousel (image gallery + arrows + thumbnails) -->
         <div class="hero__carousel">
-          <div class="hero__carousel-main" id="carouselMain" role="region" aria-label="Product image carousel" aria-roledescription="carousel">
+          <div class="hero__carousel-main" id="carouselMain" role="region" aria-label="Product image carousel"
+            aria-roledescription="carousel">
             <img src="assets/carousal-image.png" alt="HDPE Pipe Product" class="hero__carousel-img active"
               data-index="0">
             <img src="assets/carousal-image.png" alt="HDPE Pipe Detail" class="hero__carousel-img" data-index="1">
             <img src="assets/carousal-image.png" alt="HDPE Pipe Installation" class="hero__carousel-img" data-index="2">
             <img src="assets/carousal-image.png" alt="HDPE Pipe Close-up" class="hero__carousel-img" data-index="3">
+            <img src="assets/carousal-image.png" alt="HDPE Pipe Recycle" class="hero__carousel-img" data-index="4">
+            <img src="assets/carousal-image.png" alt="HDPE Pipe Flexible Coil" class="hero__carousel-img"
+              data-index="5">
             <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" aria-label="Previous">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
+              <!-- move left -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 8L2 12L6 16" />
+                <path d="M2 12H22" />
               </svg>
             </button>
             <button class="carousel-arrow carousel-arrow--next" id="carouselNext" aria-label="Next">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
+              <!-- move right -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8L22 12L18 16" />
+                <path d="M2 12H22" />
               </svg>
             </button>
           </div>
@@ -76,40 +88,84 @@
             <button class="hero__thumb" data-index="1"><img src="assets/carousal-image.png" alt="Thumb 2"></button>
             <button class="hero__thumb" data-index="2"><img src="assets/carousal-image.png" alt="Thumb 3"></button>
             <button class="hero__thumb" data-index="3"><img src="assets/carousal-image.png" alt="Thumb 4"></button>
+            <button class="hero__thumb" data-index="4"><img src="assets/carousal-image.png" alt="Thumb 5"></button>
+            <button class="hero__thumb" data-index="5"><img src="assets/carousal-image.png" alt="Thumb 6"></button>
           </div>
         </div>
-        <!-- Product info (title, features, price, CTAs) -->
+        <!-- Product info (certifications, title, features, price card, CTAs) -->
         <div class="hero__info">
-          <h1 class="hero__title">Premium HDPE Pipes & Coils for Modern Infrastructure</h1>
-          <ul class="hero__features">
-            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 16 16">
-                <path d="M13.3 4.3L6 11.6 2.7 8.3" fill="none" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg> Leak-Proof Fusion Joints</li>
-            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 16 16">
-                <path d="M13.3 4.3L6 11.6 2.7 8.3" fill="none" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg> 50+ Year Service Life</li>
-            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 16 16">
-                <path d="M13.3 4.3L6 11.6 2.7 8.3" fill="none" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg> Chemical &amp; Corrosion Resistant</li>
-            <li><svg class="icon-check" width="16" height="16" viewBox="0 0 16 16">
-                <path d="M13.3 4.3L6 11.6 2.7 8.3" fill="none" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg> Flexible Installation</li>
-          </ul>
-          <div class="hero__price">
-            <span class="hero__price-label">₹18,000 - 1,96,000</span>
+          <!-- Certification badges -->
+          <div class="hero__badges">
+            <img src="assets/bis-certified.svg" alt="BIS Certified" class="hero__badge">
+            <img src="assets/iso-certified.svg" alt="ISO Certified" class="hero__badge">
+            <img src="assets/ce-certified.svg" alt="CE Certified" class="hero__badge">
           </div>
-          <p class="hero__moq">Minimum Order Quantity: <strong>5 Kilometres (MOQ)</strong></p>
-          <p class="hero__note">Certifications: ISO 4427-2, IS 4984:2016, BIS Certified, NSF/ANSI 61</p>
-          <p class="hero__delivery">Continuous 500 metres roll available.</p>
+
+          <h1 class="hero__title">Premium HDPE Pipes & Coils for Modern Infrastructure</h1>
+
+          <ul class="hero__features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#2B3990"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Leak-Proof Fusion Joints
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#2B3990"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Chemical Resistance
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#2B3990"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              50+ Year Service Life
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#2B3990"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Flexible Installation
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#2B3990"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              Flexible Installation
+            </li>
+          </ul>
+
+          <!-- Price card -->
+          <div class="hero__price-card">
+            <span class="hero__price-label">Price Range</span>
+            <span class="hero__price-value">₹4,80,000 - 7,90,000</span>
+            <div class="hero__price-tags">
+              <span class="hero__tag hero__tag--shipping">Shipping: 6-12 days</span>
+              <span class="hero__tag hero__tag--returns">Returns: If returned within 7 days</span>
+            </div>
+            <p class="hero__price-certs">Certifications: ISO Certified, BIS Certified</p>
+          </div>
+
           <div class="hero__actions">
             <button class="btn btn--primary" id="heroQuoteBtn">Get Custom Quote</button>
-            <button class="btn btn--outline" id="heroTechBtn">View Technical Specs &rarr;</button>
+            <button class="btn btn--outline" id="heroTechBtn">View Technical Specs
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
           </div>
-          <p class="hero__trust">Trusted by thousands of companies across India</p>
         </div>
       </div>
     </section>
@@ -277,8 +333,8 @@
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq__list">
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">What is the purpose of a blue a outer for water pipes?<svg width="20"
-                height="20" viewBox="0 0 20 20">
+            <button class="faq__question" aria-expanded="false">What is the purpose of a blue a outer for water
+              pipes?<svg width="20" height="20" viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
             <div class="faq__answer">
@@ -288,8 +344,8 @@
             </div>
           </div>
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">What are the benefits of using aluminium casting in manufacturing?<svg
-                width="20" height="20" viewBox="0 0 20 20">
+            <button class="faq__question" aria-expanded="false">What are the benefits of using aluminium casting in
+              manufacturing?<svg width="20" height="20" viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
             <div class="faq__answer">
@@ -298,8 +354,8 @@
             </div>
           </div>
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">How is aluminium casting performed?<svg width="20" height="20"
-                viewBox="0 0 20 20">
+            <button class="faq__question" aria-expanded="false">How is aluminium casting performed?<svg width="20"
+                height="20" viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
             <div class="faq__answer">
@@ -308,8 +364,8 @@
             </div>
           </div>
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">What are the common applications of aluminium casting?<svg width="20"
-                height="20" viewBox="0 0 20 20">
+            <button class="faq__question" aria-expanded="false">What are the common applications of aluminium
+              casting?<svg width="20" height="20" viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
             <div class="faq__answer">
@@ -318,8 +374,8 @@
             </div>
           </div>
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">Can aluminium casting be customised?<svg width="20" height="20"
-                viewBox="0 0 20 20">
+            <button class="faq__question" aria-expanded="false">Can aluminium casting be customised?<svg width="20"
+                height="20" viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
             <div class="faq__answer">
