@@ -34,13 +34,13 @@
 
   <main>
     <!-- Breadcrumb Navigation -->
-    <div class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
       <div class="container">
         <a href="#">Products</a>
-        <span class="breadcrumb__sep">&gt;</span>
-        <span>Flexible Pipe Coils</span>
+        <span class="breadcrumb__sep" aria-hidden="true">&gt;</span>
+        <span aria-current="page">Flexible Pipe Coils</span>
       </div>
-    </div>
+    </nav>
 
     <!-- HERO SECTION: 
          left side is mage carousel with zoom  |  right side is Product info -->
@@ -48,7 +48,7 @@
       <div class="container hero__grid">
         <!-- Carousel (image gallery + arrows + thumbnails) -->
         <div class="hero__carousel">
-          <div class="hero__carousel-main" id="carouselMain">
+          <div class="hero__carousel-main" id="carouselMain" role="region" aria-label="Product image carousel" aria-roledescription="carousel">
             <img src="assets/carousal-image.png" alt="HDPE Pipe Product" class="hero__carousel-img active"
               data-index="0">
             <img src="assets/carousal-image.png" alt="HDPE Pipe Detail" class="hero__carousel-img" data-index="1">
@@ -206,7 +206,7 @@
         <p class="section-subtitle">Our HDPE pipes deliver unmatched durability, flexibility and environmental
           responsibility for every stage of your piping/plumbing systems.</p>
         <div class="features__grid">
-          <div class="features__item">
+          <article class="features__item">
             <div class="features__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="16" r="14" stroke="#2D3192" stroke-width="2" />
                 <path d="M10 16l4 4 8-8" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
@@ -215,8 +215,8 @@
             <h3>Superior Chemical Resistance</h3>
             <p>HDPE pipes resist a wide range of chemicals, solvents, acids, and alkalis, making them ideal for
               industrial waste disposal and chemical transport applications.</p>
-          </div>
-          <div class="features__item">
+          </article>
+          <article class="features__item">
             <div class="features__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="16" r="14" stroke="#2D3192" stroke-width="2" />
                 <path d="M10 16l4 4 8-8" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
@@ -225,8 +225,8 @@
             <h3>Exceptional Flexibility &amp; Durability</h3>
             <p>HDPE pipes resist a wide range of chemicals, solvents, acids, and alkalis, making them ideal for
               industrial waste, chemical transport applications.</p>
-          </div>
-          <div class="features__item">
+          </article>
+          <article class="features__item">
             <div class="features__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="16" r="14" stroke="#2D3192" stroke-width="2" />
                 <path d="M10 16l4 4 8-8" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
@@ -235,8 +235,8 @@
             <h3>Leak-Proof Fusion Welding</h3>
             <p>HDPE pipes resist a wide range of chemicals, solvents, acids, and alkalis, making them ideal for
               industrial waste, chemical transport applications.</p>
-          </div>
-          <div class="features__item">
+          </article>
+          <article class="features__item">
             <div class="features__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="16" r="14" stroke="#2D3192" stroke-width="2" />
                 <path d="M10 16l4 4 8-8" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
@@ -245,8 +245,8 @@
             <h3>Cost-Effective Long Term Solution</h3>
             <p>HDPE pipes resist a wide range of chemicals, solvents, acids, and alkalis, making them ideal for
               industrial waste, chemical transport applications.</p>
-          </div>
-          <div class="features__item">
+          </article>
+          <article class="features__item">
             <div class="features__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="16" r="14" stroke="#2D3192" stroke-width="2" />
                 <path d="M10 16l4 4 8-8" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
@@ -255,8 +255,8 @@
             <h3>Environmentally Sustainable</h3>
             <p>HDPE pipes resist a wide range of chemicals, solvents, acids, and alkalis, making them ideal for
               industrial waste, chemical transport applications.</p>
-          </div>
-          <div class="features__item">
+          </article>
+          <article class="features__item">
             <div class="features__icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                 <circle cx="16" cy="16" r="14" stroke="#2D3192" stroke-width="2" />
                 <path d="M10 16l4 4 8-8" stroke="#2D3192" stroke-width="2" stroke-linecap="round"
@@ -265,7 +265,7 @@
             <h3>Tested Quality Assurance</h3>
             <p>HDPE pipes resist a wide range of chemicals, solvents, acids, and alkalis, making them ideal for
               industrial waste, chemical transport applications.</p>
-          </div>
+          </article>
         </div>
         <button class="btn btn--primary btn--center" id="requestSampleBtn">Request a Sample</button>
       </div>
@@ -277,7 +277,7 @@
         <h2 class="section-title">Frequently Asked Questions</h2>
         <div class="faq__list">
           <div class="faq__item">
-            <button class="faq__question">What is the purpose of a blue a outer for water pipes?<svg width="20"
+            <button class="faq__question" aria-expanded="false">What is the purpose of a blue a outer for water pipes?<svg width="20"
                 height="20" viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
@@ -288,7 +288,7 @@
             </div>
           </div>
           <div class="faq__item">
-            <button class="faq__question">What are the benefits of using aluminium casting in manufacturing?<svg
+            <button class="faq__question" aria-expanded="false">What are the benefits of using aluminium casting in manufacturing?<svg
                 width="20" height="20" viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
@@ -298,7 +298,7 @@
             </div>
           </div>
           <div class="faq__item">
-            <button class="faq__question">How is aluminium casting performed?<svg width="20" height="20"
+            <button class="faq__question" aria-expanded="false">How is aluminium casting performed?<svg width="20" height="20"
                 viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
@@ -308,7 +308,7 @@
             </div>
           </div>
           <div class="faq__item">
-            <button class="faq__question">What are the common applications of aluminium casting?<svg width="20"
+            <button class="faq__question" aria-expanded="false">What are the common applications of aluminium casting?<svg width="20"
                 height="20" viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
@@ -318,7 +318,7 @@
             </div>
           </div>
           <div class="faq__item">
-            <button class="faq__question">Can aluminium casting be customised?<svg width="20" height="20"
+            <button class="faq__question" aria-expanded="false">Can aluminium casting be customised?<svg width="20" height="20"
                 viewBox="0 0 20 20">
                 <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
               </svg></button>
@@ -332,10 +332,10 @@
         <div class="faq__catalogue">
           <p><strong>Want us to email the entire catalogue?</strong></p>
           <p>Enter your email and we expect our expert will share the catalogue with you.</p>
-          <div class="faq__catalogue-form">
+          <form class="faq__catalogue-form" action="#" method="post">
             <input type="email" placeholder="example@gmail.com" class="input" id="catalogueEmail">
             <button class="btn btn--primary" id="downloadCatalogueBtn">Download Brochure</button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -347,22 +347,22 @@
         <p class="section-subtitle">From water distribution to industrial engineering networks, our premium engineered
           thermoplastic HDPE-PE Explore performances across diverse applications.</p>
         <div class="applications__grid">
-          <div class="applications__card">
+          <article class="applications__card">
             <img src="assets/piping-solution-image.png" alt="Palmer Manufacturing">
             <h3>Palmer Manufacturing</h3>
-          </div>
-          <div class="applications__card">
+          </article>
+          <article class="applications__card">
             <img src="assets/piping-solution-image.png" alt="Palmer Manufacturing">
             <h3>Palmer Manufacturing</h3>
-          </div>
-          <div class="applications__card">
+          </article>
+          <article class="applications__card">
             <img src="assets/piping-solution-image.png" alt="Palmer Manufacturing">
             <h3>Palmer Manufacturing</h3>
-          </div>
-          <div class="applications__card">
+          </article>
+          <article class="applications__card">
             <img src="assets/piping-solution-image.png" alt="Palmer Manufacturing">
             <h3>Palmer Manufacturing</h3>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -402,38 +402,42 @@
         <p class="section-subtitle">From Infrastructure, from Star Titanium to specialized heat setting machines, our
           delivery excellence speaks for itself.</p>
         <div class="testimonials__grid">
-          <div class="testimonials__card">
-            <div class="testimonials__quote">&ldquo;</div>
-            <p><strong>Optimized our FRC Extrusion efficiency</strong></p>
-            <p>The precision engineering of Mangalam's HDPE pipes significantly improved our FRC extrusion line
-              efficiency. Consistent wall thickness and superior material properties.</p>
-            <span class="testimonials__author">James Kindler</span>
+          <article class="testimonials__card">
+            <blockquote>
+              <p><strong>Optimized our FRC Extrusion efficiency</strong></p>
+              <p>The precision engineering of Mangalam's HDPE pipes significantly improved our FRC extrusion line
+                efficiency. Consistent wall thickness and superior material properties.</p>
+            </blockquote>
+            <cite class="testimonials__author">James Kindler</cite>
             <button class="btn btn--outline btn--sm">Carlos Montague</button>
-          </div>
-          <div class="testimonials__card">
-            <div class="testimonials__quote">&ldquo;</div>
-            <p><strong>Excellent support for specialized applications</strong></p>
-            <p>The Mangalam team provided outstanding technical consultation for our specialized application. The
-              performance of Mangalam's pipes has exceeded our expectations.</p>
-            <span class="testimonials__author">Carlos Montague</span>
+          </article>
+          <article class="testimonials__card">
+            <blockquote>
+              <p><strong>Excellent support for specialized applications</strong></p>
+              <p>The Mangalam team provided outstanding technical consultation for our specialized application. The
+                performance of Mangalam's pipes has exceeded our expectations.</p>
+            </blockquote>
+            <cite class="testimonials__author">Carlos Montague</cite>
             <button class="btn btn--outline btn--sm">Carlos Montague</button>
-          </div>
-          <div class="testimonials__card">
-            <div class="testimonials__quote">&ldquo;</div>
-            <p><strong>Excellent support for specialized applications</strong></p>
-            <p>The Mangalam team provided outstanding technical consultation for our specialized application. The
-              performance of Mangalam's pipes has exceeded expectations.</p>
-            <span class="testimonials__author">Carlos Montague</span>
+          </article>
+          <article class="testimonials__card">
+            <blockquote>
+              <p><strong>Excellent support for specialized applications</strong></p>
+              <p>The Mangalam team provided outstanding technical consultation for our specialized application. The
+                performance of Mangalam's pipes has exceeded expectations.</p>
+            </blockquote>
+            <cite class="testimonials__author">Carlos Montague</cite>
             <button class="btn btn--outline btn--sm">Carlos Montague</button>
-          </div>
-          <div class="testimonials__card">
-            <div class="testimonials__quote">&ldquo;</div>
-            <p><strong>Provides the exact specifications</strong></p>
-            <p>We factory tested applications and provided detailed specifications. Mangalam's quality control and
-              technical support exceeded all expectations.</p>
-            <span class="testimonials__author">Carlos Montague</span>
+          </article>
+          <article class="testimonials__card">
+            <blockquote>
+              <p><strong>Provides the exact specifications</strong></p>
+              <p>We factory tested applications and provided detailed specifications. Mangalam's quality control and
+                technical support exceeded all expectations.</p>
+            </blockquote>
+            <cite class="testimonials__author">Carlos Montague</cite>
             <button class="btn btn--outline btn--sm">Carlos Montague</button>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -445,29 +449,29 @@
         <p class="section-subtitle">From intermediate, from Star Titanium to specialized heat setting machines, we
           deliver excellence-backed solutions.</p>
         <div class="solutions__grid">
-          <div class="solutions__card">
+          <article class="solutions__card">
             <img src="assets/piping-solution-image.png" alt="HDPE Fittings">
             <h3>HDPE Fittings &amp; Accessories</h3>
             <p>Complete range of compression and electrofusion fittings engineered to complement our HDPE piping
               systems.</p>
             <a href="#" class="btn btn--text">Learn More</a>
             <a href="#" class="btn btn--primary btn--sm">Request Pricing</a>
-          </div>
-          <div class="solutions__card">
+          </article>
+          <article class="solutions__card">
             <img src="assets/piping-solution-image.png" alt="Installation Services">
             <h3>Professional Installation Services</h3>
             <p>Professional installation services ensure optimal performance and system reliability for complex piping
               installations.</p>
             <a href="#" class="btn btn--text">Learn More</a>
             <a href="#" class="btn btn--primary btn--sm">Request Pricing</a>
-          </div>
-          <div class="solutions__card">
+          </article>
+          <article class="solutions__card">
             <img src="assets/piping-solution-image.png" alt="PE-RT Heating">
             <h3>PE-RT Heating Pipes</h3>
             <p>High-performance PE-RT pipes designed for radiant floor heating and hot water distribution systems.</p>
             <a href="#" class="btn btn--text">Learn More</a>
             <a href="#" class="btn btn--primary btn--sm">Request Pricing</a>
-          </div>
+          </article>
         </div>
         <div class="solutions__cta">
           <p><strong>Didn't find what you're looking for?</strong></p>
@@ -483,26 +487,26 @@
         <h2 class="section-title">Resources &amp; Downloads</h2>
         <p class="section-subtitle">Get all the technical documentation and resources you need to make informed
           decisions about our HDPE piping solutions.</p>
-        <div class="resources__list">
-          <div class="resources__item">
+        <ul class="resources__list">
+          <li class="resources__item">
             <span>HDPE Pipe Installation Manual (PDF)</span>
             <a href="#" class="btn btn--text">Download PDF <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M7 1v8m0 0l3-3m-3 3L4 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
               </svg></a>
-          </div>
-          <div class="resources__item">
+          </li>
+          <li class="resources__item">
             <span>Maintenance &amp; Inspection Handbook (PDF)</span>
             <a href="#" class="btn btn--text">Download PDF <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M7 1v8m0 0l3-3m-3 3L4 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
               </svg></a>
-          </div>
-          <div class="resources__item">
+          </li>
+          <li class="resources__item">
             <span>Technical Specifications Datasheet (PDF)</span>
             <a href="#" class="btn btn--text">Download PDF <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M7 1v8m0 0l3-3m-3 3L4 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
               </svg></a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -529,7 +533,7 @@
         <p class="footer__tagline">Premium <strong>HDPE Pipes &amp; Fittings</strong> Manufacturer in <span
             class="highlight">South India</span></p>
       </div>
-      <div class="footer__links">
+      <nav class="footer__links" aria-label="Footer navigation">
         <div class="footer__col">
           <h4>About Us</h4>
           <a href="#">Company</a>
@@ -554,7 +558,7 @@
           <a href="#">Terms</a>
           <a href="#">Refund Policy</a>
         </div>
-      </div>
+      </nav>
       <div class="footer__social">
         <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />

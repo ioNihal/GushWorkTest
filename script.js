@@ -140,10 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
     question.addEventListener('click', () => {
       // Close all other items (single-open accordion)
       faqItems.forEach((other) => {
-        if (other !== item) other.classList.remove('open');
+        if (other !== item) {
+          other.classList.remove('open');
+          other.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+        }
       });
       // Toggle the clicked item
-      item.classList.toggle('open');
+      const isOpen = item.classList.toggle('open');
+      question.setAttribute('aria-expanded', String(isOpen));
     });
   });
 

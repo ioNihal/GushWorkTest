@@ -765,6 +765,20 @@ select {
   gap: 8px;
 }
 
+.testimonials__card blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.testimonials__card blockquote::before {
+  content: '\201C';
+  display: block;
+  font-size: 2.5rem;
+  color: #2D3192;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .testimonials__quote {
   font-size: 2.5rem;
   color: #2D3192;
@@ -782,8 +796,9 @@ select {
   color: #111;
 }
 
-.testimonials__author {
+cite.testimonials__author {
   font-size: 0.8rem;
+  font-style: normal;
   color: #999;
   margin-top: auto;
 }
@@ -857,6 +872,8 @@ select {
 .resources__list {
   max-width: 600px;
   margin: 0 auto;
+  list-style: none;
+  padding: 0;
 }
 
 .resources__item {
