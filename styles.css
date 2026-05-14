@@ -490,8 +490,6 @@ select {
 /* Brand Marquee section */
 .marquee {
   padding: 24px 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
   overflow: hidden;
 }
 
@@ -499,7 +497,7 @@ select {
   text-align: center;
   font-size: 0.8rem;
   color: #999;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .marquee__track {
