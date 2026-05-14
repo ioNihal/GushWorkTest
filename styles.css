@@ -263,6 +263,7 @@ select {
 /* Hero */
 .hero {
   padding: 20px 0 60px;
+  overflow-x: hidden;
 }
 
 .hero__grid {
@@ -803,40 +804,134 @@ select {
   justify-content: center;
 }
 
-
 /* Applications section */
 .applications {
   padding: 80px 0;
+  background: #f5f5f5;
+  overflow: hidden;
 }
 
 .applications .container {
   padding: 0 24px;
 }
 
-.applications__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.applications .container .section-title {
+  text-align: left;
+}
+
+.applications .container .section-subtitle {
+  text-align: left;
+}
+
+.applications__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 24px;
+  margin-bottom: 40px;
+}
+
+.applications__header-text {
+  max-width: 600px;
+}
+
+.applications__arrows {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-top: 8px;
+  flex-shrink: 0;
+}
+
+.applications__arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid #d1d5db;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #374151;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.applications__arrow:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+/* Full-bleed scrolling track */
+.applications__track-wrap {
+  padding-left: 24px;
+  /* aligns with container left edge */
+}
+
+.applications__track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 
 .applications__card {
-  border-radius: 12px;
+  flex: 0 0 320px;
+  border-radius: 16px;
   overflow: hidden;
   position: relative;
+  height: 420px;
+  background: #1a1a1a;
 }
 
 .applications__card img {
   width: 100%;
-  height: 240px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 12px;
+  display: block;
+  border-radius: 16px;
+  filter: brightness(0.6);
+  transition: filter 0.3s ease;
+  position: relative;
 }
 
-.applications__card h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-top: 12px;
-  color: #222;
+.applications__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+
+.applications__card:hover img {
+  filter: brightness(0.75);
+}
+
+.applications__card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px;
+  z-index: 2;
+}
+
+.applications__card-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.applications__card-body p {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.55;
+  margin: 0;
 }
 
 /* Manufacturing Process section */
@@ -1280,9 +1375,13 @@ cite.testimonials__author {
 
 /* screen size less than 1080px */
 @media (max-width: 1080px) {
+
   .hero__grid {
     grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 24px;
   }
+
 
   .hero__zoom-preview {
     display: none !important;
@@ -1329,6 +1428,32 @@ cite.testimonials__author {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
+  .hero__grid {
+    gap: 24px;
+    padding: 0 16px;
+  }
+
+  .hero__carousel-main {
+    border-width: 3px;
+  }
+
+  .hero__thumbnails {
+    gap: 6px;
+  }
+
+  .hero__thumb {
+    width: 56px;
+    height: 56px;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__price-value {
+    font-size: 1.2rem;
+  }
+
   .applications__grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1343,7 +1468,7 @@ cite.testimonials__author {
     -webkit-overflow-scrolling: touch;
   }
 
-  .faq__catalogue-form {
+  .faq__catalogue {
     flex-direction: column;
   }
 
@@ -1388,8 +1513,13 @@ cite.testimonials__author {
     font-size: 0.85rem;
   }
 
+  .hero__grid {
+    padding: 0 12px;
+    gap: 20px;
+  }
+
   .hero__title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 
   .hero__price-label {
@@ -1397,12 +1527,36 @@ cite.testimonials__author {
   }
 
   .hero__thumbnails {
-    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero__thumb {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero__price-card {
+    padding: 12px 14px;
+  }
+
+  .hero__price-tags {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Zoom preview — never on mobile */
+  .hero__zoom-preview {
+    display: none !important;
   }
 
   .features__grid {

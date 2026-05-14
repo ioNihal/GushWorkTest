@@ -152,6 +152,49 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+  /* Applications Carousel:
+   - Slides the track left/right by one card width + gap on arrow click.
+   - Clamps at both ends (no infinite loop).
+*/
+  const appsTrack = document.getElementById('appsTrack');
+  const appsPrev = document.getElementById('appsPrev');
+  const appsNext = document.getElementById('appsNext');
+
+  if (appsTrack && appsPrev && appsNext) {
+    let appsIndex = 0;
+
+    function getAppsCardWidth() {
+      const card = appsTrack.querySelector('.applications__card');
+      if (!card) return 340;
+      const gap = 20;
+      return card.offsetWidth + gap;
+    }
+
+    function updateAppsTrack() {
+      const offset = appsIndex * getAppsCardWidth();
+      appsTrack.style.transform = `translateX(-${offset}px)`;
+      const totalCards = appsTrack.querySelectorAll('.applications__card').length;
+      const visibleCount = Math.floor(appsTrack.parentElement.offsetWidth / getAppsCardWidth());
+      appsPrev.disabled = appsIndex === 0;
+      appsNext.disabled = appsIndex >= totalCards - visibleCount;
+      appsPrev.style.opacity = appsPrev.disabled ? '0.4' : '1';
+      appsNext.style.opacity = appsNext.disabled ? '0.4' : '1';
+    }
+
+    appsPrev.addEventListener('click', () => {
+      if (appsIndex > 0) { appsIndex--; updateAppsTrack(); }
+    });
+
+    appsNext.addEventListener('click', () => {
+      const totalCards = appsTrack.querySelectorAll('.applications__card').length;
+      const visibleCount = Math.floor(appsTrack.parentElement.offsetWidth / getAppsCardWidth());
+      if (appsIndex < totalCards - visibleCount) { appsIndex++; updateAppsTrack(); }
+    });
+
+    updateAppsTrack();
+  }
+
+
   /* Modals:
      - Two modals: Download Brochure & Request a Call Back.
      - Closeable via ✕ button, overlay click, or Escape key.
