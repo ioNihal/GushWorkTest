@@ -359,67 +359,89 @@
     <!-- FAQ: accordion + catalogue download form -->
     <section class="faq" id="faqSection">
       <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <h2 class="section-title"><span>Frequently</span> Asked Questions</h2>
+
         <div class="faq__list">
-          <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">What is the purpose of a blue a outer for water
-              pipes?<svg width="20" height="20" viewBox="0 0 20 20">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
-              </svg></button>
+          <div class="faq__item open">
+            <button class="faq__question" aria-expanded="true">
+              What is the purpose of a laser cutter for sheet metal?
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
             <div class="faq__answer">
-              <p>It is a standard colour identification system. Blue stripe/outer on HDPE pipes typically indicates the
-                pipe is intended for potable water distribution, allowing for quick visual identification for on-site
-                installers & manufacturing processes.</p>
+              <p>It is designed to cut various types of sheet metal with precision, allowing for intricate designs and
+                shapes that are essential in manufacturing processes.</p>
             </div>
           </div>
+
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">What are the benefits of using aluminium casting in
-              manufacturing?<svg width="20" height="20" viewBox="0 0 20 20">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
-              </svg></button>
+            <button class="faq__question" aria-expanded="false">
+              What are the benefits of using aluminum tubing in manufacturing?
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
             <div class="faq__answer">
-              <p>Aluminium casting provides lightweight strength, corrosion resistance, and excellent thermal
-                conductivity for manufacturing applications.</p>
+              <p>It is designed to cut various types of sheet metal with precision, allowing for intricate designs and
+                shapes that are essential in manufacturing processes.</p>
             </div>
           </div>
+
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">How is aluminium casting performed?<svg width="20"
-                height="20" viewBox="0 0 20 20">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
-              </svg></button>
+            <button class="faq__question" aria-expanded="false">
+              How is aluminum tubing produced?
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
             <div class="faq__answer">
-              <p>Aluminium casting involves melting aluminium and pouring it into moulds to create specific shapes and
-                components.</p>
+              <p>It is designed to cut various types of sheet metal with precision, allowing for intricate designs and
+                shapes that are essential in manufacturing processes.</p>
             </div>
           </div>
+
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">What are the common applications of aluminium
-              casting?<svg width="20" height="20" viewBox="0 0 20 20">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
-              </svg></button>
+            <button class="faq__question" aria-expanded="false">
+              What are the common applications of aluminum tubing?
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
             <div class="faq__answer">
-              <p>Common applications include automotive parts, aerospace components, industrial machinery, and consumer
-                electronics housings.</p>
+              <p>It is designed to cut various types of sheet metal with precision, allowing for intricate designs and
+                shapes that are essential in manufacturing processes.</p>
             </div>
           </div>
+
           <div class="faq__item">
-            <button class="faq__question" aria-expanded="false">Can aluminium casting be customised?<svg width="20"
-                height="20" viewBox="0 0 20 20">
-                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
-              </svg></button>
+            <button class="faq__question" aria-expanded="false">
+              Can aluminum tubing be customized?
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
             <div class="faq__answer">
-              <p>Yes, aluminium casting can be fully customised to meet specific design requirements and performance
-                specifications.</p>
+              <p>It is designed to cut various types of sheet metal with precision, allowing for intricate designs and
+                shapes that are essential in manufacturing processes.</p>
             </div>
           </div>
         </div>
-        <!-- catalogue form -->
+
+        <!-- Catalogue CTA -->
         <div class="faq__catalogue">
-          <p><strong>Want us to email the entire catalogue?</strong></p>
-          <p>Enter your email and we expect our expert will share the catalogue with you.</p>
+          <div class="faq__catalogue-text">
+            <h3>Want us to email the entire catalogue?</h3>
+            <p>Enter your email and an expert will share the catalogue with you.</p>
+          </div>
           <form class="faq__catalogue-form" action="#" method="post">
-            <input type="email" placeholder="example@gmail.com" class="input" id="catalogueEmail">
-            <button class="btn btn--primary" id="downloadCatalogueBtn">Download Brochure</button>
+            <input type="email" placeholder="Email Address" class="input" id="catalogueEmail">
+            <button class="btn btn--primary" id="downloadCatalogueBtn" type="submit">Request Catalogue</button>
           </form>
         </div>
       </div>
