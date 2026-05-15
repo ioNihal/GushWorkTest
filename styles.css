@@ -1560,7 +1560,7 @@ select {
 
 /* Brand bar */
 .footer__brand-bar {
-  padding: 32px 0;
+  padding: 32px 20px;
 }
 
 .footer__brand-inner {
