@@ -271,17 +271,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* Process Step Tabs:
-     - Highlights the active manufacturing step.
-     - TODO: Wire up content panel switching.
-     */
+   - Tab buttons switch the visible panel.
+   - Image arrows inside each panel also navigate between tabs.
+*/
   const processSteps = document.querySelectorAll('.process__step');
+  const processPanels = document.querySelectorAll('.process__panel');
+  const totalProcessSteps = processSteps.length;
+  let currentProcessStep = 0;
 
-  processSteps.forEach((step) => {
-    step.addEventListener('click', () => {
-      processSteps.forEach((s) => s.classList.remove('active'));
-      step.classList.add('active');
-      // TODO: Switch the corresponding content panel
+  function goToProcessStep(index) {
+    if (index < 0) index = 0;
+    if (index >= totalProcessSteps) index = totalProcessSteps - 1;
+    currentProcessStep = index;
+
+    processSteps.forEach((s, i) => s.classList.toggle('active', i === index));
+    processPanels.forEach((p, i) => p.classList.toggle('active', i === index));
+
+    // Scroll active tab into view
+    const activeTab = processSteps[index];
+    activeTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+    // Update arrow disabled states
+    document.querySelectorAll('.process__img-arrow--prev').forEach(btn => {
+      btn.disabled = currentProcessStep === 0;
+    });
+    document.querySelectorAll('.process__img-arrow--next').forEach(btn => {
+      btn.disabled = currentProcessStep === totalProcessSteps - 1;
+    });
+  }
+
+  processSteps.forEach((step, i) => {
+    step.addEventListener('click', () => goToProcessStep(i));
+  });
+
+  document.querySelectorAll('.process__img-arrow').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const dir = parseInt(btn.dataset.dir);
+      goToProcessStep(currentProcessStep + dir);
     });
   });
+
+  // Init arrow states
+  goToProcessStep(0);
 
 });

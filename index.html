@@ -471,7 +471,7 @@
         </div>
       </div>
 
-      <!-- Full-bleed track, no container constraint -->
+      <!-- carousal track -->
       <div class="applications__track-wrap">
         <div class="applications__track" id="appsTrack">
           <article class="applications__card">
@@ -538,28 +538,266 @@
     <section class="process">
       <div class="container">
         <h2 class="section-title">Advanced HDPE Pipe Manufacturing Process</h2>
-        <p class="section-subtitle">Our state-of-the-art manufacturing facility ensures consistent quality, optimal
-          material properties, and dimensional accuracy in every pipe we manufacture.</p>
-        <!-- Step navigation tabs -->
-        <div class="process__nav">
-          <button class="process__step active" data-step="0">Raw Material</button>
-          <button class="process__step" data-step="1">Extrusion</button>
-          <button class="process__step" data-step="2">Sizing</button>
-          <button class="process__step" data-step="3">Cooling</button>
-          <button class="process__step" data-step="4">Marking</button>
-          <button class="process__step" data-step="5">Cutting</button>
-          <button class="process__step" data-step="6">Packaging</button>
-        </div>
-        <div class="process__content">
-          <h3>High-Grade Raw Material Selection</h3>
-          <p>We procure only best-in-class polyethylene (PE80/PE100) from approved manufacturers, with thorough incoming
-            quality checks including melt flow index, density measurements, and contamination screening.</p>
-          <ul>
-            <li>Approved manufacturer sourcing only</li>
-            <li>100% pure resin compound</li>
-          </ul>
-        </div>
-      </div>
+        <p class="section-subtitle">Our state-of-the-art extrusion technology ensures consistent quality, optimal
+          material
+          properties, and dimensional accuracy in every pipe we manufacture.</p>
+
+        <div class="process__card">
+          <!-- Tab nav -->
+          <div class="process__nav">
+            <button class="process__step active" data-step="0">Raw Material</button>
+            <button class="process__step" data-step="1">Extrusion</button>
+            <button class="process__step" data-step="2">Cooling</button>
+            <button class="process__step" data-step="3">Sizing</button>
+            <button class="process__step" data-step="4">Quality Control</button>
+            <button class="process__step" data-step="5">Marking</button>
+            <button class="process__step" data-step="6">Cutting</button>
+            <button class="process__step" data-step="7">Packaging</button>
+          </div>
+
+          <!-- Content panels -->
+          <div class="process__body">
+            <!-- Panel 0 -->
+            <div class="process__panel active" data-panel="0">
+              <div class="process__panel-text">
+                <h3>High-Grade Raw Material Selection</h3>
+                <p>Vacuum sizing tanks ensure precise outer diameter while internal pressure maintains perfect roundness
+                  and wall thickness uniformity.</p>
+                <ul>
+                  <li>PE100 grade material</li>
+                  <li>Optimal molecular weight distribution</li>
+                </ul>
+              </div>
+              <div class="process__panel-image">
+                <button class="process__img-arrow process__img-arrow--prev" data-dir="-1" aria-label="Previous step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 19L3 12L10 5M3 12L21 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <img src="assets/carousal-image.png" alt="Raw Material">
+                <button class="process__img-arrow process__img-arrow--next" data-dir="1" aria-label="Next step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 19L21 12L14 5M21 12L3 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel 1 -->
+            <div class="process__panel" data-panel="1">
+              <div class="process__panel-text">
+                <h3>Precision Extrusion</h3>
+                <p>High-output extruders melt and homogenize PE100 resin at controlled temperatures, forcing it through
+                  a precision die to form a continuous pipe profile.</p>
+                <ul>
+                  <li>Temperature-controlled barrel zones</li>
+                  <li>Consistent melt pressure monitoring</li>
+                </ul>
+              </div>
+              <div class="process__panel-image">
+                <button class="process__img-arrow process__img-arrow--prev" data-dir="-1" aria-label="Previous step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 19L3 12L10 5M3 12L21 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <img src="assets/carousal-image.png" alt="Extrusion">
+                <button class="process__img-arrow process__img-arrow--next" data-dir="1" aria-label="Next step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 19L21 12L14 5M21 12L3 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="process__panel" data-panel="2">
+              <div class="process__panel-text">
+                <h3>Controlled Cooling Process</h3>
+                <p>Freshly extruded pipes pass through calibrated water-cooling troughs that set the pipe's final
+                  dimensions while relieving internal stresses.</p>
+                <ul>
+                  <li>Multi-stage water trough cooling</li>
+                  <li>Stress-relief and dimensional stability</li>
+                </ul>
+              </div>
+              <div class="process__panel-image">
+                <button class="process__img-arrow process__img-arrow--prev" data-dir="-1" aria-label="Previous step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 19L3 12L10 5M3 12L21 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <img src="assets/carousal-image.png" alt="Cooling">
+                <button class="process__img-arrow process__img-arrow--next" data-dir="1" aria-label="Next step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 19L21 12L14 5M21 12L3 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel 3 -->
+            <div class="process__panel" data-panel="3">
+              <div class="process__panel-text">
+                <h3>Vacuum Sizing & Calibration</h3>
+                <p>Vacuum sizing tanks ensure precise outer diameter while internal pressure maintains perfect roundness
+                  and uniform wall thickness across all pipe lengths.</p>
+                <ul>
+                  <li>Laser-guided diameter measurement</li>
+                  <li>Real-time wall thickness feedback</li>
+                </ul>
+              </div>
+              <div class="process__panel-image">
+                <button class="process__img-arrow process__img-arrow--prev" data-dir="-1" aria-label="Previous step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 19L3 12L10 5M3 12L21 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <img src="assets/carousal-image.png" alt="Sizing">
+                <button class="process__img-arrow process__img-arrow--next" data-dir="1" aria-label="Next step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 19L21 12L14 5M21 12L3 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel 4 -->
+            <div class="process__panel" data-panel="4">
+              <div class="process__panel-text">
+                <h3>In-Line Quality Control</h3>
+                <p>Every pipe undergoes continuous in-line inspection including hydrostatic pressure testing, ovality
+                  checks, and surface defect scanning before leaving the line.</p>
+                <ul>
+                  <li>Hydrostatic pressure validation</li>
+                  <li>Automated surface defect detection</li>
+                </ul>
+              </div>
+              <div class="process__panel-image">
+                <button class="process__img-arrow process__img-arrow--prev" data-dir="-1" aria-label="Previous step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 19L3 12L10 5M3 12L21 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <img src="assets/carousal-image.png" alt="Quality Control">
+                <button class="process__img-arrow process__img-arrow--next" data-dir="1" aria-label="Next step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 19L21 12L14 5M21 12L3 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel 5 -->
+            <div class="process__panel" data-panel="5">
+              <div class="process__panel-text">
+                <h3>Pipe Marking & Identification</h3>
+                <p>Inkjet printers apply permanent identification markings every metre — including brand, standard, SDR
+                  rating, pressure class, and production batch for full traceability.</p>
+                <ul>
+                  <li>IS/ISO standard compliant marking</li>
+                  <li>Batch traceability codes printed</li>
+                </ul>
+              </div>
+              <div class="process__panel-image">
+                <button class="process__img-arrow process__img-arrow--prev" data-dir="-1" aria-label="Previous step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 19L3 12L10 5M3 12L21 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <img src="assets/carousal-image.png" alt="Marking">
+                <button class="process__img-arrow process__img-arrow--next" data-dir="1" aria-label="Next step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 19L21 12L14 5M21 12L3 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel 6 -->
+            <div class="process__panel" data-panel="6">
+              <div class="process__panel-text">
+                <h3>Precision Pipe Cutting</h3>
+                <p>Automated planetary cutters deliver clean, square cuts to exact customer-specified lengths with no
+                  burrs, ensuring leak-free joint preparation on site.</p>
+                <ul>
+                  <li>Automated length measurement</li>
+                  <li>Burr-free, square-end cutting</li>
+                </ul>
+              </div>
+              <div class="process__panel-image">
+                <button class="process__img-arrow process__img-arrow--prev" data-dir="-1" aria-label="Previous step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 19L3 12L10 5M3 12L21 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <img src="assets/carousal-image.png" alt="Cutting">
+                <button class="process__img-arrow process__img-arrow--next" data-dir="1" aria-label="Next step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 19L21 12L14 5M21 12L3 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel 7 -->
+            <div class="process__panel" data-panel="7">
+              <div class="process__panel-text">
+                <h3>Secure Packaging & Dispatch</h3>
+                <p>Finished pipes are bundled, end-capped, and wrapped with protective UV-resistant film. Each bundle
+                  includes a quality certificate and full traceability documentation.</p>
+                <ul>
+                  <li>UV-protective wrapping for storage</li>
+                  <li>Quality certificate in every bundle</li>
+                </ul>
+              </div>
+              <div class="process__panel-image">
+                <button class="process__img-arrow process__img-arrow--prev" data-dir="-1" aria-label="Previous step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 19L3 12L10 5M3 12L21 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <img src="assets/carousal-image.png" alt="Packaging">
+                <button class="process__img-arrow process__img-arrow--next" data-dir="1" aria-label="Next step">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 19L21 12L14 5M21 12L3 12" stroke="#4D545C" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+
+          </div>
     </section>
 
     <!-- Testimonials with customer review cards -->

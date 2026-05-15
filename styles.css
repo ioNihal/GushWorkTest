@@ -669,6 +669,7 @@ select {
 .faq {
   padding: 80px 0;
   background: white;
+  border-top: 1px solid #E5E5E5;
 }
 
 .faq .container {
@@ -807,8 +808,9 @@ select {
 /* Applications section */
 .applications {
   padding: 80px 0;
-  background: #f5f5f5;
+  background: white;
   overflow: hidden;
+  border-top: 1px solid #E5E5E5;
 }
 
 .applications .container {
@@ -934,68 +936,180 @@ select {
   margin: 0;
 }
 
-/* Manufacturing Process section */
 .process {
   padding: 80px 0;
-  background: #f9f9f9;
+  background: white;
+  border-top: 1px solid #E5E5E5;
 }
 
 .process .container {
   padding: 0 24px;
 }
 
+.process__card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  overflow: hidden;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 4px 28px rgba(14, 30, 37, 0.08);
+}
+
+/* Tab nav */
 .process__nav {
   display: flex;
-  gap: 0;
+  gap: 8px;
+  justify-content: center;
   margin-bottom: 32px;
   overflow-x: auto;
-  border-radius: 8px;
-  background: #eee;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 4px;
+}
+
+.process__nav::-webkit-scrollbar {
+  display: none;
 }
 
 .process__step {
-  padding: 12px 20px;
-  font-size: 0.85rem;
+  padding: 10px 20px;
+  font-size: 0.82rem;
   font-weight: 500;
   white-space: nowrap;
   color: #555;
   background: transparent;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 999px;
   transition: all 0.2s;
-  border-radius: 6px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.process__step:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 1.5px;
+  background: #CFD1D4;
+  position: absolute;
+  left: 101%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.process__step:hover {
+  border-color: #2D3192;
+  color: #2D3192;
 }
 
 .process__step.active {
   background: #2D3192;
   color: #fff;
+  border-color: #2D3192;
 }
 
-.process__content {
-  background: #fff;
-  padding: 32px;
-  border-radius: 12px;
+/* Panel layout */
+.process__panel {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
 }
 
-.process__content h3 {
-  font-size: 1.2rem;
+.process__panel.active {
+  display: grid;
+}
+
+.process__panel-text h3 {
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  color: #111;
+  margin-bottom: 16px;
 }
 
-.process__content p {
+.process__panel-text p {
   font-size: 0.9rem;
   color: #555;
-  margin-bottom: 12px;
-  line-height: 1.7;
+  line-height: 1.75;
+  margin-bottom: 20px;
 }
 
-.process__content ul {
-  padding-left: 20px;
+.process__panel-text ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.process__content li {
+.process__panel-text li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 6px;
+  font-weight: 600;
+  color: #111;
+}
+
+.process__panel-text li::before {
+  content: '';
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  background: #2D3192 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") center/12px no-repeat;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Image side */
+.process__panel-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.process__panel-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.process__img-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.process__img-arrow:hover {
+  background: #fff;
+}
+
+.process__img-arrow--prev {
+  left: 12px;
+}
+
+.process__img-arrow--next {
+  right: 12px;
+}
+
+.process__img-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 
 /* Testimonials section */
@@ -1466,6 +1580,20 @@ cite.testimonials__author {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .process__card {
+    padding: 20px 16px;
+  }
+
+  .process__panel.active {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .process__panel-image img {
+    height: 220px;
   }
 
   .faq__catalogue {
