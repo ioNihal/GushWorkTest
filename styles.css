@@ -1399,6 +1399,8 @@ select {
 /* CTA Banner section */
 .cta {
   padding: 80px 0;
+  background: white;
+  border-top: 1px solid #E5E5E5;
 }
 
 .cta .container {
@@ -1406,36 +1408,147 @@ select {
 }
 
 .cta__box {
-  background: #1a1a2e;
-  color: #fff;
-  border-radius: 16px;
-  padding: 60px 48px;
-  text-align: center;
-}
-
-.cta__box h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.cta__box p {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 24px;
-}
-
-.cta__actions {
+  background: #2B3990;
+  border-radius: 20px;
+  padding: 56px 48px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 60px;
 }
 
-.cta__phone {
+/* Left side */
+.cta__left {
+  flex: 1;
+  color: #fff;
+}
+
+.cta__left h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.cta__left>p {
   font-size: 0.9rem;
-  color: #aaa;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.cta__divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 28px 0;
+}
+
+.cta__contact-note {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+.cta__contact-note strong {
+  color: #fff;
+}
+
+.cta__contact-note a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Right: form card */
+.cta__form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 340px;
+  flex-shrink: 0;
+}
+
+.cta__form-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.cta__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  color: #111;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+
+.cta__input:focus {
+  border-color: #2D3192;
+}
+
+.cta__input::placeholder {
+  color: #9ca3af;
+}
+
+/* Phone row: dial code + number */
+.cta__phone-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.cta__dial-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.cta__dial {
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: #111;
+  font-family: inherit;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+.cta__input--phone {
+  flex: 1;
+}
+
+.cta__submit {
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+
+.cta__submit:hover {
+  background: #222;
 }
 
 /* Footer */
