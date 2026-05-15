@@ -436,7 +436,7 @@
             <h3>Want us to email the entire catalogue?</h3>
             <p>Enter your email and an expert will share the catalogue with you.</p>
           </div>
-          <form class="faq__catalogue-form" action="#" method="post">
+          <form class="faq__catalogue-form" onsubmit="event.preventDefault();">
             <input type="email" placeholder="Email Address" class="input" id="catalogueEmail">
             <button class="btn btn--primary" id="downloadCatalogueBtn" type="submit">Request Catalogue</button>
           </form>
@@ -1191,16 +1191,24 @@
     <div class="modal">
       <div class="modal__header">
         <h3>Let us email the entire catalogue to you</h3>
-        <button class="modal__close" data-close-modal>&times;</button>
+        <button class="modal__close" data-close-modal aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
       </div>
       <div class="modal__body">
-        <label>Your Email *</label>
-        <input type="email" class="input" placeholder="example@gmail.com">
-        <label>Your Contact (Optional)</label>
-        <input type="tel" class="input" placeholder="+91-0000000000">
+        <div class="modal__field">
+          <label>Your Email <span class="modal__required">*</span></label>
+          <input type="email" class="modal__input" placeholder="example@gmail.com">
+        </div>
+        <div class="modal__field">
+          <label>Your Contact <span class="modal__optional">(Optional)</span></label>
+          <input type="tel" class="modal__input" placeholder="+91-0000000000">
+        </div>
       </div>
       <div class="modal__footer">
-        <button class="btn btn--primary">Download Brochure</button>
+        <button class="modal__submit modal__submit--muted">Download Brochure</button>
       </div>
     </div>
   </div>
@@ -1210,21 +1218,32 @@
     <div class="modal">
       <div class="modal__header">
         <h3>Request a call back</h3>
-        <button class="modal__close" data-close-modal>&times;</button>
+        <button class="modal__close" data-close-modal aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
       </div>
       <div class="modal__body">
-        <input type="text" class="input" placeholder="Full Name">
-        <input type="text" class="input" placeholder="Company Name">
-        <input type="email" class="input" placeholder="Email Address">
-        <div class="input-group">
-          <select class="input input--sm">
-            <option>+91</option>
-          </select>
-          <input type="tel" class="input" placeholder="7003026616">
+        <input type="text" class="modal__input" placeholder="Full Name">
+        <input type="text" class="modal__input" placeholder="Company Name">
+        <input type="email" class="modal__input" placeholder="Email Address">
+        <div class="modal__phone-row">
+          <div class="modal__dial-wrap">
+            <select class="modal__dial">
+              <option>+91</option>
+              <option>+1</option>
+              <option>+44</option>
+            </select>
+            <svg width="12" height="12" viewBox="0 0 20 20" fill="none">
+              <path d="M5 8l5 5 5-5" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <input type="tel" class="modal__input modal__input--phone" placeholder="7003026616">
         </div>
       </div>
       <div class="modal__footer">
-        <button class="btn btn--primary">Submit Form</button>
+        <button class="modal__submit modal__submit--primary">Submit Form</button>
       </div>
     </div>
   </div>

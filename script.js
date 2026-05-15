@@ -212,9 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const callbackTriggers = [
     document.getElementById('headerQuoteBtn'),
     document.getElementById('heroQuoteBtn'),
-    document.getElementById('requestSampleBtn'),
     document.getElementById('ctaQuoteBtn'),
-    document.getElementById('talkToSalesBtn'),
   ];
 
   function openModal(modal) {
