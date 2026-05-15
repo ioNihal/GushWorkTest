@@ -2220,6 +2220,10 @@ select {
     height: 360px;
   }
 
+  .testimonials__card {
+    width: 300px;
+  }
+
   .resources__item {
     flex-direction: column;
     align-items: flex-start;
