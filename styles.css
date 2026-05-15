@@ -1223,6 +1223,7 @@ select {
 .solutions {
   padding: 80px 0;
   background: white;
+  border-top: 1px solid #E5E5E5;
 }
 
 .solutions .container {
@@ -1333,26 +1334,66 @@ select {
 /* Resources & Downloads section */
 .resources {
   padding: 80px 0;
+  background: white;
+  border-top: 1px solid #E5E5E5;
 }
 
 .resources .container {
   padding: 0 24px;
 }
 
-.resources__list {
-  max-width: 600px;
+.resources__card {
+  max-width: 1100px;
   margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.resources__list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .resources__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid #eee;
+  padding: 20px 32px;
   font-size: 0.9rem;
+  font-weight: 500;
+  color: #111;
+  transition: background 0.15s;
+}
+
+.resources__item:last-child {
+  border-bottom: none;
+}
+
+.resources__item:hover {
+  background: #fafafa;
+}
+
+.resources__download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #2D3192;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.resources__download:hover {
+  opacity: 0.75;
+}
+
+.resources__download svg {
+  flex-shrink: 0;
 }
 
 /* CTA Banner section */
