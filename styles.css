@@ -2036,6 +2036,8 @@ select {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-bottom: 8px;
   }
 
   .process__card {
@@ -2044,12 +2046,17 @@ select {
 
   .process__panel.active {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 24px;
   }
 
+  .process__panel-image {
+    width: 100%;
+  }
+
   .process__panel-image img {
-    height: 220px;
+    height: 240px;
+    width: 100%;
   }
 
   .faq__catalogue {
@@ -2196,6 +2203,16 @@ select {
   .process__step {
     padding: 10px 14px;
     font-size: 0.75rem;
+  }
+
+  .process__panel-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .process__panel-text p {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
   }
 
   .applications__card {
