@@ -2006,6 +2006,10 @@ select {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
+  .header .header__inner .btn {
+    display: none;
+  }
+
   .hero__grid {
     gap: 24px;
     padding: 0 16px;
