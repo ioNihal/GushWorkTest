@@ -213,14 +213,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('headerQuoteBtn'),
     document.getElementById('heroQuoteBtn'),
     document.getElementById('ctaQuoteBtn'),
+    document.getElementById('requestSampleBtn'),
+    document.getElementById('talkToSalesBtn'),
   ];
 
   function openModal(modal) {
+    if (!modal) return;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function closeModal(modal) {
+    if (!modal) return;
     modal.classList.remove('active');
     document.body.style.overflow = '';
   }
@@ -243,9 +247,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Close on overlay (backdrop) click
   [downloadModal, callbackModal].forEach((modal) => {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal(modal);
-    });
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal(modal);
+      });
+    }
   });
 
   // Close on Escape key press
@@ -255,6 +261,15 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal(callbackModal);
     }
   });
+
+  // "View Technical Specs" scrolls to specs section
+  const heroTechBtn = document.getElementById('heroTechBtn');
+  const specsSection = document.getElementById('specsSection');
+  if (heroTechBtn && specsSection) {
+    heroTechBtn.addEventListener('click', () => {
+      specsSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 
 
   /* Mobile Nav Toggle:
