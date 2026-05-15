@@ -867,7 +867,6 @@ select {
 /* Full-bleed scrolling track */
 .applications__track-wrap {
   padding-left: 24px;
-  /* aligns with container left edge */
 }
 
 .applications__track {
@@ -1115,63 +1114,109 @@ select {
 /* Testimonials section */
 .testimonials {
   padding: 80px 0;
+  background: white;
+  border-top: 1px solid #E5E5E5;
+  overflow: hidden;
 }
 
 .testimonials .container {
   padding: 0 24px;
 }
 
+.testimonials__track-wrap {
+  padding: 40px 0 8px 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.testimonials__track-wrap::-webkit-scrollbar {
+  display: none;
+}
+
 .testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  display: flex;
   gap: 20px;
+  width: max-content;
+  /* lets cards overflow naturally */
 }
 
 .testimonials__card {
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 24px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
+  width: 360px;
+  /* fixed card width */
+  flex-shrink: 0;
+}
+
+.testimonials__quote {
+  font-size: 2.8rem;
+  color: #2D3192;
+  font-weight: 800;
+  line-height: 1;
+  font-family: Georgia, serif;
+  display: block;
 }
 
 .testimonials__card blockquote {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
 }
 
-.testimonials__card blockquote::before {
-  content: '\201C';
-  display: block;
-  font-size: 2.5rem;
-  color: #2D3192;
+.testimonials__heading {
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 1;
-}
-
-.testimonials__quote {
-  font-size: 2.5rem;
-  color: #2D3192;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.testimonials__card p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.6;
-}
-
-.testimonials__card p strong {
   color: #111;
+  line-height: 1.4;
+  margin: 0;
 }
 
-cite.testimonials__author {
-  font-size: 0.8rem;
-  font-style: normal;
-  color: #999;
+.testimonials__card blockquote p:not(.testimonials__heading) {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Author row */
+.testimonials__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.testimonials__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  flex-shrink: 0;
+}
+
+.testimonials__name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.testimonials__role {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin: 0;
 }
 
 /* Solutions Portfolio section */
@@ -1740,7 +1785,6 @@ cite.testimonials__author {
   .faq,
   .applications,
   .process,
-  .testimonials,
   .solutions,
   .resources,
   .cta {
@@ -1757,7 +1801,6 @@ cite.testimonials__author {
   .faq,
   .applications,
   .process,
-  .testimonials,
   .solutions,
   .resources,
   .cta {
@@ -1774,7 +1817,6 @@ cite.testimonials__author {
   .faq,
   .applications,
   .process,
-  .testimonials,
   .solutions,
   .resources,
   .cta {
@@ -1791,7 +1833,6 @@ cite.testimonials__author {
   .faq,
   .applications,
   .process,
-  .testimonials,
   .solutions,
   .resources,
   .cta {
@@ -1808,7 +1849,6 @@ cite.testimonials__author {
   .faq,
   .applications,
   .process,
-  .testimonials,
   .solutions,
   .resources,
   .cta {
@@ -1825,7 +1865,6 @@ cite.testimonials__author {
   .faq,
   .applications,
   .process,
-  .testimonials,
   .solutions,
   .resources,
   .cta {
